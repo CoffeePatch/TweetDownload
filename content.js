@@ -4,13 +4,13 @@
         var n = r(8).default;
         function o() {
           "use strict";
-          /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ (t.exports =
+          /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ ((t.exports =
             o =
               function () {
                 return e;
               }),
             (t.exports.__esModule = !0),
-            (t.exports.default = t.exports);
+            (t.exports.default = t.exports));
           var e = {},
             r = Object.prototype,
             i = r.hasOwnProperty,
@@ -125,15 +125,15 @@
                       },
                       function (t) {
                         r("throw", t, s, c);
-                      }
+                      },
                     )
                   : e.resolve(f).then(
                       function (t) {
-                        (l.value = t), s(l);
+                        ((l.value = t), s(l));
                       },
                       function (t) {
                         return r("throw", t, s, c);
-                      }
+                      },
                     );
               }
               c(u.arg);
@@ -160,17 +160,20 @@
                   "throw" === e.method)
                 )
                   return p;
-                (e.method = "throw"),
+                ((e.method = "throw"),
                   (e.arg = new TypeError(
-                    "The iterator does not provide a 'throw' method"
-                  ));
+                    "The iterator does not provide a 'throw' method",
+                  )));
               }
               return p;
             }
             var n = h(r, t.iterator, e.arg);
             if ("throw" === n.type)
               return (
-                (e.method = "throw"), (e.arg = n.arg), (e.delegate = null), p
+                (e.method = "throw"),
+                (e.arg = n.arg),
+                (e.delegate = null),
+                p
               );
             var o = n.arg;
             return o
@@ -189,18 +192,18 @@
           }
           function E(t) {
             var e = { tryLoc: t[0] };
-            1 in t && (e.catchLoc = t[1]),
+            (1 in t && (e.catchLoc = t[1]),
               2 in t && ((e.finallyLoc = t[2]), (e.afterLoc = t[3])),
-              this.tryEntries.push(e);
+              this.tryEntries.push(e));
           }
           function S(t) {
             var e = t.completion || {};
-            (e.type = "normal"), delete e.arg, (t.completion = e);
+            ((e.type = "normal"), delete e.arg, (t.completion = e));
           }
           function k(t) {
-            (this.tryEntries = [{ tryLoc: "root" }]),
+            ((this.tryEntries = [{ tryLoc: "root" }]),
               t.forEach(E, this),
-              this.reset(!0);
+              this.reset(!0));
           }
           function j(t) {
             if (t) {
@@ -212,8 +215,8 @@
                   n = function e() {
                     for (; ++r < t.length; )
                       if (i.call(t, r))
-                        return (e.value = t[r]), (e.done = !1), e;
-                    return (e.value = void 0), (e.done = !0), e;
+                        return ((e.value = t[r]), (e.done = !1), e);
+                    return ((e.value = void 0), (e.done = !0), e);
                   };
                 return (n.next = n);
               }
@@ -277,9 +280,9 @@
                 function r() {
                   for (; e.length; ) {
                     var n = e.pop();
-                    if (n in t) return (r.value = n), (r.done = !1), r;
+                    if (n in t) return ((r.value = n), (r.done = !1), r);
                   }
-                  return (r.done = !0), r;
+                  return ((r.done = !0), r);
                 }
               );
             }),
@@ -337,7 +340,7 @@
                     } else {
                       if (!c)
                         throw new Error(
-                          "try statement without catch or finally"
+                          "try statement without catch or finally",
                         );
                       if (this.prev < o.finallyLoc) return r(o.finallyLoc);
                     }
@@ -376,10 +379,10 @@
                   "break" === t.type || "continue" === t.type
                     ? (this.next = t.arg)
                     : "return" === t.type
-                    ? ((this.rval = this.arg = t.arg),
-                      (this.method = "return"),
-                      (this.next = "end"))
-                    : "normal" === t.type && e && (this.next = e),
+                      ? ((this.rval = this.arg = t.arg),
+                        (this.method = "return"),
+                        (this.next = "end"))
+                      : "normal" === t.type && e && (this.next = e),
                   p
                 );
               },
@@ -387,7 +390,7 @@
                 for (var e = this.tryEntries.length - 1; e >= 0; --e) {
                   var r = this.tryEntries[e];
                   if (r.finallyLoc === t)
-                    return this.complete(r.completion, r.afterLoc), S(r), p;
+                    return (this.complete(r.completion, r.afterLoc), S(r), p);
                 }
               },
               catch: function (t) {
@@ -419,9 +422,9 @@
             e
           );
         }
-        (t.exports = o),
+        ((t.exports = o),
           (t.exports.__esModule = !0),
-          (t.exports.default = t.exports);
+          (t.exports.default = t.exports));
       },
       8: (t) => {
         function e(r) {
@@ -444,9 +447,9 @@
             e(r)
           );
         }
-        (t.exports = e),
+        ((t.exports = e),
           (t.exports.__esModule = !0),
-          (t.exports.default = t.exports);
+          (t.exports.default = t.exports));
       },
       757: (t, e, r) => {
         t.exports = r(591)();
@@ -457,11 +460,11 @@
     var o = e[n];
     if (void 0 !== o) return o.exports;
     var i = (e[n] = { exports: {} });
-    return t[n](i, i.exports, r), i.exports;
+    return (t[n](i, i.exports, r), i.exports);
   }
-  (r.n = (t) => {
+  ((r.n = (t) => {
     var e = t && t.__esModule ? () => t.default : () => t;
-    return r.d(e, { a: e }), e;
+    return (r.d(e, { a: e }), e);
   }),
     (r.d = (t, e) => {
       for (var n in e)
@@ -523,15 +526,15 @@
                 "Map" === r || "Set" === r
                   ? Array.from(t)
                   : "Arguments" === r ||
-                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-                  ? n(t, e)
-                  : void 0
+                      /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                    ? n(t, e)
+                    : void 0
               );
             }
           })(t) ||
           (function () {
             throw new TypeError(
-              "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+              "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
             );
           })()
         );
@@ -625,7 +628,7 @@
                         .shift(),
                 a = r.media_url_https.substr(
                   0,
-                  r.media_url_https.lastIndexOf(".")
+                  r.media_url_https.lastIndexOf("."),
                 );
               return a.endsWith(".twimg")
                 ? ((a = ""), {})
@@ -668,7 +671,7 @@
           .trim()
           .replace(/(\r\n|\n|\r)/gm, "")
           .substr(0, 50);
-        return r || (r = e), r;
+        return (r || (r = e), r);
       }
       function h(t) {
         return (
@@ -697,7 +700,7 @@
                                     for (;;)
                                       switch ((t.prev = t.next)) {
                                         case 0:
-                                          return (t.next = 2), e.blob();
+                                          return ((t.next = 2), e.blob());
                                         case 2:
                                           return (
                                             (t.t0 = t.sent),
@@ -713,36 +716,36 @@
                                           return t.stop();
                                       }
                                   }, t);
-                                })
+                                }),
                               );
                               return function (e) {
                                 return t.apply(this, arguments);
                               };
-                            })()
+                            })(),
                           )
                           .then(function (t) {
                             var e = t.blob,
                               r = v(t.type),
                               o = document.createElement("a");
-                            (o.style.display = "none"),
+                            ((o.style.display = "none"),
                               document.body.appendChild(o),
                               (o.href = window.URL.createObjectURL(e)),
                               o.setAttribute("target", "_blank"),
                               o.setAttribute(
                                 "download",
-                                "".concat(n, ".").concat(r)
+                                "".concat(n, ".").concat(r),
                               ),
                               o.click(),
                               window.URL.revokeObjectURL(o.href),
-                              document.body.removeChild(o);
-                          })
+                              document.body.removeChild(o));
+                          }),
                       );
                     case 1:
                     case "end":
                       return t.stop();
                   }
               }, t);
-            })
+            }),
           )),
           d.apply(this, arguments)
         );
@@ -792,10 +795,10 @@
         O = /\s*\}/,
         A = /#|\^|\/|>|\{|&|=|!/;
       function C(t) {
-        (this.string = t), (this.tail = t), (this.pos = 0);
+        ((this.string = t), (this.tail = t), (this.pos = 0));
       }
       function T(t, e) {
-        (this.view = t), (this.cache = { ".": this.view }), (this.parent = e);
+        ((this.view = t), (this.cache = { ".": this.view }), (this.parent = e));
       }
       function I() {
         this.templateCache = {
@@ -811,7 +814,7 @@
           },
         };
       }
-      (C.prototype.eos = function () {
+      ((C.prototype.eos = function () {
         return "" === this.tail;
       }),
         (C.prototype.scan = function (t) {
@@ -829,16 +832,16 @@
             r = this.tail.search(t);
           switch (r) {
             case -1:
-              (e = this.tail), (this.tail = "");
+              ((e = this.tail), (this.tail = ""));
               break;
             case 0:
               e = "";
               break;
             default:
-              (e = this.tail.substring(0, r)),
-                (this.tail = this.tail.substring(r));
+              ((e = this.tail.substring(0, r)),
+                (this.tail = this.tail.substring(r)));
           }
-          return (this.pos += e.length), e;
+          return ((this.pos += e.length), e);
         }),
         (T.prototype.push = function (t) {
           return new T(t, this);
@@ -855,9 +858,8 @@
                 for (
                   i = c.view, a = t.split("."), s = 0;
                   null != i && s < a.length;
-
                 )
-                  s === a.length - 1 &&
+                  (s === a.length - 1 &&
                     (u =
                       b(i, a[s]) ||
                       ((r = i),
@@ -866,8 +868,8 @@
                         "object" != typeof r &&
                         r.hasOwnProperty &&
                         r.hasOwnProperty(n))),
-                    (i = i[a[s++]]);
-              else (i = c.view[t]), (u = b(c.view, t));
+                    (i = i[a[s++]]));
+              else ((i = c.view[t]), (u = b(c.view, t)));
               if (u) {
                 e = i;
                 break;
@@ -876,7 +878,7 @@
             }
             o[t] = e;
           }
-          return m(e) && (e = e.call(this.view)), e;
+          return (m(e) && (e = e.call(this.view)), e);
         }),
         (I.prototype.clearCache = function () {
           void 0 !== this.templateCache && this.templateCache.clear();
@@ -904,7 +906,7 @@
                 function p() {
                   if (u && !l) for (; c.length; ) delete s[c.pop()];
                   else c = [];
-                  (u = !1), (l = !1);
+                  ((u = !1), (l = !1));
                 }
                 function d(t) {
                   if (
@@ -912,20 +914,20 @@
                     !g(t) || 2 !== t.length)
                   )
                     throw new Error("Invalid tags: " + t);
-                  (r = new RegExp(w(t[0]) + "\\s*")),
+                  ((r = new RegExp(w(t[0]) + "\\s*")),
                     (n = new RegExp("\\s*" + w(t[1]))),
-                    (o = new RegExp("\\s*" + w("}" + t[1])));
+                    (o = new RegExp("\\s*" + w("}" + t[1]))));
                 }
                 d(e || M.tags);
                 for (var v, y, m, b, x, _, E = new C(t); !E.eos(); ) {
                   if (((v = E.pos), (m = E.scanUntil(r))))
                     for (var T = 0, I = m.length; T < I; ++T)
-                      L((b = m.charAt(T)))
+                      (L((b = m.charAt(T)))
                         ? (c.push(s.length), (f += b))
                         : ((l = !0), (i = !0), (f += " ")),
                         s.push(["text", b, v, v + 1]),
                         (v += 1),
-                        "\n" === b && (p(), (f = ""), (h = 0), (i = !1));
+                        "\n" === b && (p(), (f = ""), (h = 0), (i = !1)));
                   if (!E.scan(r)) break;
                   if (
                     ((u = !0),
@@ -934,11 +936,11 @@
                     "=" === y
                       ? ((m = E.scanUntil(j)), E.scan(j), E.scanUntil(n))
                       : "{" === y
-                      ? ((m = E.scanUntil(o)),
-                        E.scan(O),
-                        E.scanUntil(n),
-                        (y = "&"))
-                      : (m = E.scanUntil(n)),
+                        ? ((m = E.scanUntil(o)),
+                          E.scan(O),
+                          E.scanUntil(n),
+                          (y = "&"))
+                        : (m = E.scanUntil(n)),
                     !E.scan(n))
                   )
                     throw new Error("Unclosed tag at " + E.pos);
@@ -955,7 +957,7 @@
                       throw new Error('Unopened section "' + m + '" at ' + v);
                     if (_[1] !== m)
                       throw new Error(
-                        'Unclosed section "' + _[1] + '" at ' + v
+                        'Unclosed section "' + _[1] + '" at ' + v,
                       );
                   } else
                     "name" === y || "{" === y || "&" === y
@@ -964,7 +966,7 @@
                 }
                 if ((p(), (_ = a.pop())))
                   throw new Error(
-                    'Unclosed section "' + _[1] + '" at ' + E.pos
+                    'Unclosed section "' + _[1] + '" at ' + E.pos,
                   );
                 return (function (t) {
                   for (
@@ -975,11 +977,11 @@
                     switch ((e = t[i])[0]) {
                       case "#":
                       case "^":
-                        n.push(e), o.push(e), (n = e[4] = []);
+                        (n.push(e), o.push(e), (n = e[4] = []));
                         break;
                       case "/":
-                        (o.pop()[5] = e[2]),
-                          (n = o.length > 0 ? o[o.length - 1][4] : r);
+                        ((o.pop()[5] = e[2]),
+                          (n = o.length > 0 ? o[o.length - 1][4] : r));
                         break;
                       default:
                         n.push(e);
@@ -993,7 +995,7 @@
                           ? ((r[1] += e[1]), (r[3] = e[3]))
                           : (n.push(e), (r = e)));
                     return n;
-                  })(s)
+                  })(s),
                 );
               })(t, e)),
               o && r.set(n, i)),
@@ -1008,19 +1010,19 @@
         }),
         (I.prototype.renderTokens = function (t, e, r, n, o) {
           for (var i, a, s, c = "", u = 0, l = t.length; u < l; ++u)
-            (s = void 0),
+            ((s = void 0),
               "#" === (a = (i = t[u])[0])
                 ? (s = this.renderSection(i, e, r, n, o))
                 : "^" === a
-                ? (s = this.renderInverted(i, e, r, n, o))
-                : ">" === a
-                ? (s = this.renderPartial(i, e, r, o))
-                : "&" === a
-                ? (s = this.unescapedValue(i, e))
-                : "name" === a
-                ? (s = this.escapedValue(i, e, o))
-                : "text" === a && (s = this.rawValue(i)),
-              void 0 !== s && (c += s);
+                  ? (s = this.renderInverted(i, e, r, n, o))
+                  : ">" === a
+                    ? (s = this.renderPartial(i, e, r, o))
+                    : "&" === a
+                      ? (s = this.unescapedValue(i, e))
+                      : "name" === a
+                        ? (s = this.escapedValue(i, e, o))
+                        : "text" === a && (s = this.rawValue(i)),
+              void 0 !== s && (c += s));
           return c;
         }),
         (I.prototype.renderSection = function (t, e, r, n, o) {
@@ -1040,7 +1042,7 @@
             else if (m(s)) {
               if ("string" != typeof n)
                 throw new Error(
-                  "Cannot use higher-order sections without the original template"
+                  "Cannot use higher-order sections without the original template",
                 );
               null !=
                 (s = s.call(e.view, n.slice(t[3], t[5]), function (t) {
@@ -1097,7 +1099,7 @@
         }),
         (I.prototype.getConfigEscape = function (t) {
           return t && "object" == typeof t && !g(t) ? t.escape : void 0;
-        });
+        }));
       var M = {
           name: "mustache.js",
           version: "4.2.0",
@@ -1117,7 +1119,7 @@
           },
         },
         P = new I();
-      (M.clearCache = function () {
+      ((M.clearCache = function () {
         return P.clearCache();
       }),
         (M.parse = function (t, e) {
@@ -1128,7 +1130,7 @@
             throw new TypeError(
               'Invalid template! Template should be a "string" but "' +
                 ((g((o = t)) ? "array" : typeof o) +
-                  '" was given as the first argument for mustache#render(template, view, partials)')
+                  '" was given as the first argument for mustache#render(template, view, partials)'),
             );
           var o;
           return P.render(t, e, r, n);
@@ -1140,7 +1142,7 @@
         }),
         (M.Scanner = C),
         (M.Context = T),
-        (M.Writer = I);
+        (M.Writer = I));
       const U = M;
       function N(t, e) {
         var r =
@@ -1180,7 +1182,7 @@
             };
           }
           throw new TypeError(
-            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
+            "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         }
         var i,
@@ -1192,10 +1194,10 @@
           },
           n: function () {
             var t = r.next();
-            return (a = t.done), t;
+            return ((a = t.done), t);
           },
           e: function (t) {
-            (s = !0), (i = t);
+            ((s = !0), (i = t));
           },
           f: function () {
             try {
@@ -1213,9 +1215,9 @@
       }
       var G,
         V = [];
-      s(function (t) {
+      (s(function (t) {
         var e = u(t);
-        e.length && V.push.apply(V, o(e)), V.length;
+        (e.length && V.push.apply(V, o(e)), V.length);
       }),
         (window.observerX =
           ((G = function (t) {
@@ -1223,7 +1225,8 @@
               n = t.$image,
               i = V.find(function (t) {
                 return (
-                  n.src.indexOf(t.thumbnail), n.src.indexOf(t.thumbnail) > -1
+                  n.src.indexOf(t.thumbnail),
+                  n.src.indexOf(t.thumbnail) > -1
                 );
               }),
               c = r.getAttribute("data-twitter-video-downloader-extension");
@@ -1233,7 +1236,7 @@
                 f = l.width,
                 h = l.height,
                 d = document.createElement("button");
-              d.classList.add("extension-button"),
+              (d.classList.add("extension-button"),
                 d.setAttribute("role", "button"),
                 d.setAttribute("title", "Download"),
                 d.setAttribute("entityId", d.parentNode),
@@ -1242,10 +1245,10 @@
                   "beforeend",
                   U.render(
                     '<div class="extension-button-container"> <div class="extension-button-hover"></div> <svg class="download-icon" width="{{ width }}" height="{{ height }}" viewBox="0 0 24 24" aria-hidden="true"> <g> <path d="M11.99 16l-5.7-5.7L7.7 8.88l3.29 3.3V2.59h2v9.59l3.3-3.3 1.41 1.42-5.71 5.7zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"> </path> </g> </svg> <svg class="loading-icon" viewBox="0 0 32 32" aria-hidden="true" width="{{ width }}" height="{{ height }}"> <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"></circle> <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"></circle> </svg> <svg class="success-icon" viewBox="0 0 24 24" aria-hidden="true" width="{{ width }}" height="{{ height }}"> <g> <path d="M9 20c-.264 0-.52-.104-.707-.293l-4.785-4.785c-.39-.39-.39-1.023 0-1.414s1.023-.39 1.414 0l3.946 3.945L18.075 4.41c.32-.45.94-.558 1.395-.24.45.318.56.942.24 1.394L9.817 19.577c-.17.24-.438.395-.732.42-.028.002-.057.003-.085.003z"> </path> </g> </svg> </div>',
-                    { width: f, height: h }
-                  )
+                    { width: f, height: h },
+                  ),
                 ),
-                r.appendChild(d),
+                r.insertBefore(d, r.firstChild),
                 d.addEventListener(
                   "click",
                   (function () {
@@ -1257,14 +1260,14 @@
                             for (;;)
                               switch ((t.prev = t.next)) {
                                 case 0:
-                                  e.preventDefault(),
+                                  (e.preventDefault(),
                                     e.stopImmediatePropagation(),
                                     (this.disabled = !0),
                                     this.classList.add("loading"),
                                     s(function (t) {
                                       var e = u(t);
-                                      e.length && V.push.apply(V, o(e)),
-                                        V.length;
+                                      (e.length && V.push.apply(V, o(e)),
+                                        V.length);
                                     }),
                                     i.entityId,
                                     (r = V.filter(function (t) {
@@ -1273,7 +1276,7 @@
                                     (n = new Set()),
                                     (c = N(r)),
                                     (t.prev = 9),
-                                    (h = 0);
+                                    (h = 0));
                                 case 10:
                                   c.s();
                                 case 11:
@@ -1292,7 +1295,7 @@
                                     (t.next = 17),
                                     p(
                                       f.video || f.photo,
-                                      (f.text || f.entityId) + "_" + f.id
+                                      (f.text || f.entityId) + "_" + f.id,
                                     )
                                   );
                                 case 17:
@@ -1304,12 +1307,14 @@
                                   t.next = 25;
                                   break;
                                 case 22:
-                                  (t.prev = 22), (t.t0 = t.catch(9)), c.e(t.t0);
+                                  ((t.prev = 22),
+                                    (t.t0 = t.catch(9)),
+                                    c.e(t.t0));
                                 case 25:
-                                  return (t.prev = 25), c.f(), t.finish(25);
+                                  return ((t.prev = 25), c.f(), t.finish(25));
                                 case 28:
-                                  this.classList.remove("loading"),
-                                    this.classList.add("success");
+                                  (this.classList.remove("loading"),
+                                    this.classList.add("success"));
                                 case 30:
                                 case "end":
                                   return t.stop();
@@ -1317,15 +1322,15 @@
                           },
                           t,
                           this,
-                          [[9, 22, 25, 28]]
+                          [[9, 22, 25, 28]],
                         );
-                      })
+                      }),
                     );
                     return function (e) {
                       return t.apply(this, arguments);
                     };
-                  })()
-                );
+                  })(),
+                ));
             }
           }),
           void new MutationObserver(function (t) {
@@ -1334,7 +1339,7 @@
                 if (t instanceof HTMLElement == 0) return !1;
                 if ("IMG" === t.nodeName || "VIDEO" === t.nodeName) {
                   var e = t.closest(
-                    "article[role='article'], div[aria-modal='true']"
+                    "article[role='article'], div[aria-modal='true']",
                   );
                   if (e) {
                     var r = e.querySelector("[role='group']:last-child");
@@ -1343,6 +1348,6 @@
                 }
               });
             });
-          }).observe(document, { childList: !0, subtree: !0 })));
-    })();
+          }).observe(document, { childList: !0, subtree: !0 }))));
+    })());
 })();
