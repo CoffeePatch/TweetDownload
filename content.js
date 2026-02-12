@@ -691,54 +691,23 @@
                     case 0:
                       return t.abrupt(
                         "return",
-                        fetch(r)
-                          .then(
-                            (function () {
-                              var t = e(
-                                a().mark(function t(e) {
-                                  return a().wrap(function (t) {
-                                    for (;;)
-                                      switch ((t.prev = t.next)) {
-                                        case 0:
-                                          return ((t.next = 2), e.blob());
-                                        case 2:
-                                          return (
-                                            (t.t0 = t.sent),
-                                            (t.t1 =
-                                              e.headers.get("Content-Type")),
-                                            t.abrupt("return", {
-                                              blob: t.t0,
-                                              type: t.t1,
-                                            })
-                                          );
-                                        case 5:
-                                        case "end":
-                                          return t.stop();
-                                      }
-                                  }, t);
-                                }),
-                              );
-                              return function (e) {
-                                return t.apply(this, arguments);
-                              };
-                            })(),
-                          )
-                          .then(function (t) {
-                            var e = t.blob,
-                              r = v(t.type),
-                              o = document.createElement("a");
-                            ((o.style.display = "none"),
-                              document.body.appendChild(o),
-                              (o.href = window.URL.createObjectURL(e)),
-                              o.setAttribute("target", "_blank"),
-                              o.setAttribute(
-                                "download",
-                                "".concat(n, ".").concat(r),
-                              ),
-                              o.click(),
-                              window.URL.revokeObjectURL(o.href),
-                              document.body.removeChild(o));
-                          }),
+                        fetch(r).then(function (response) {
+                          var contentType =
+                            response.headers.get("Content-Type") || "";
+                          var ext = v(contentType);
+                          var safeName = n
+                            .replace(/[<>:"/\\|?*]/g, "_")
+                            .replace(/\s+/g, " ")
+                            .trim();
+                          window.postMessage(
+                            {
+                              type: "TWEET_DOWNLOAD_REQUEST",
+                              url: r,
+                              filename: "Tweets/" + safeName + "." + ext,
+                            },
+                            "*",
+                          );
+                        }),
                       );
                     case 1:
                     case "end":
