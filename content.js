@@ -696,9 +696,12 @@
                             response.headers.get("Content-Type") || "";
                           var ext = v(contentType);
                           var safeName = n
-                            .replace(/[<>:"/\\|?*]/g, "_")
+                            .replace(/[<>:"/\\|?*#%]/g, "_")
+                            .replace(/[^\x20-\x7E]/g, "")
                             .replace(/\s+/g, " ")
+                            .replace(/^[\s.]+|[\s.]+$/g, "")
                             .trim();
+                          if (!safeName) safeName = "tweet_media";
                           window.postMessage(
                             {
                               type: "TWEET_DOWNLOAD_REQUEST",
@@ -720,7 +723,12 @@
         );
       }
       function v(t) {
-        return "image/jpeg" === t ? "jpg" : "mp4";
+        if ("image/jpeg" === t) return "jpg";
+        if ("image/png" === t) return "png";
+        if ("image/webp" === t) return "webp";
+        if ("image/gif" === t) return "gif";
+        if ("image/bmp" === t) return "bmp";
+        return "mp4";
       }
       /*!
        * mustache.js - Logic-less {{mustache}} templates with JavaScript
